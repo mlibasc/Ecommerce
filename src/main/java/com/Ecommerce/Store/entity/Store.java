@@ -7,17 +7,18 @@ import lombok.ToString;
 
 import javax.persistence.*;
 
-@Data
+
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@Entity
+//@Entity
+//@Data
+//@Table(name = "STORE_TBL")
 @Embeddable
-@Table(name = "STORE_TBL")
 public class Store {
-    @Id
-    @GeneratedValue
-    private Integer id;
+//    @Id
+//    @GeneratedValue
+    private Integer storeID;
     private String storeName;
 
     public String getStoreName() {

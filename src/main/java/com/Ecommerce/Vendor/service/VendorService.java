@@ -16,11 +16,6 @@ public class VendorService {
     public Vendor addVendor(Vendor vendor){
         return vendorRepo.save(vendor);
     }
-//
-//    public Store addStoreToVendor(Store store){
-//        // add store to vendor
-//
-//    }
 
     public List<Vendor> getAllVendors(){
         return vendorRepo.findAll();

@@ -9,7 +9,6 @@ import lombok.ToString;
 import javax.persistence.*;
 import java.util.List;
 
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
@@ -18,10 +17,12 @@ import java.util.List;
 public class Vendor {
     @Id
     @GeneratedValue
-    private Integer id;
+    private Integer vendorID;
     private String vendorName;
+
     @Embedded
-    private List<Store> stores;
+    private Store store;
+//    private List<Store> stores;
 
     public String getVendorName() {
         return vendorName;
@@ -30,4 +31,10 @@ public class Vendor {
     public void setVendorName(String vendorName) {
         this.vendorName = vendorName;
     }
+
+//    public Store getStores(){ return store;}
+//
+//    public void setStores(Store stores){
+//        this.store = stores;
+//    }
 }
